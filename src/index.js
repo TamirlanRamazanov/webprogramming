@@ -1,9 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import AppHeader from "./components/app-header";
-import SearchPanel from "./components/search-panel";
-import TodoList from "./components/todo-list";
-import ItemStatusFilter from "./components/item-status-filter";
+
+import AppHeader from './components/app-header';
+import SearchPanel from './components/search-panel';
+import TodoList from './components/todo-list';
+import ItemStatusFilter from './components/item-status-filter';
+import './index.css';
 
 const App = () => {
 
@@ -15,11 +17,13 @@ const App = () => {
     ];
 
     return (
-        <div>
-            <AppHeader />
-            <SearchPanel />
-            <TodoList todos = {todoData} />
-            <ItemStatusFilter />
+        <div className="todo-app">
+            <AppHeader toDo={1} done={3} />
+            <div className="top-panel d-flex">
+                <SearchPanel />
+                <ItemStatusFilter />
+            </div>
+            <TodoList todos={todoData} />
         </div>
     );
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import './item-status-filter.css';
+
 const ItemStatusFilter = () => {
     return (
         <div className={"btn-group"}>
